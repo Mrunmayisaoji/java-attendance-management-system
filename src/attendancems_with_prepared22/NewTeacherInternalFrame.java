@@ -424,7 +424,7 @@ Validation v;
     private void jTextField1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField1CaretUpdate
         // TODO add your handling code here:
         jLabel8.setText(v.validateData("[a-z0-9]{3,30}", jTextField1.getText()));
-        if (jLabel8.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel8.getText())) {
             jLabel8.setForeground(Color.green);
         }
         else {
@@ -435,7 +435,7 @@ Validation v;
     private void jTextField2CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField2CaretUpdate
         // TODO add your handling code here:
          jLabel10.setText(v.validateData("[A-Z a-z]{3,30}", jTextField2.getText()));
-        if (jLabel10.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel10.getText())) {
             jLabel10.setForeground(Color.green);
         }
         else {
@@ -446,7 +446,7 @@ Validation v;
     private void jTextField3CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField3CaretUpdate
         // TODO add your handling code here:
          jLabel11.setText(v.validateData("[a-z0-9]{3,30}", jTextField3.getText()));
-        if (jLabel11.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel11.getText())) {
             jLabel11.setForeground(Color.green);
         }
         else {

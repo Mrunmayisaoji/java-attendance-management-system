@@ -395,7 +395,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
         // TODO add your handling code here:
         try {
-            if (jTextField1.getText().equals("") && jTextField2.getText().equals("") && jTextField3.getText().equals("") && jTextField4.getText().equals("")) {
+            if ("".equals(jTextField1.getText()) && "".equals(jTextField2.getText()) && "".equals(jTextField3.getText()) && "".equals(jTextField4.getText())) {
                 JOptionPane.showMessageDialog(this, "Sorry, but an error has been made", "Required Data", JOptionPane.ERROR_MESSAGE);
             } else {
                 c.st.executeUpdate("update teacher_details set name = '" + jTextField1.getText().trim() + "' , surname = '" + jTextField2.getText().trim() + "' , age = " + jTextField3.getText().trim() + ", email= '" + jTextField4.getText().trim() + "', teacher_pass = '" + jLabelOldPassword.getText() + "' where teacher_id = " + jLabelTeacherID.getText());
@@ -416,7 +416,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
 
         try {
 
-            if (jTextField5.getText().equals("")) {
+            if ("".equals(jTextField5.getText())) {
                 JOptionPane.showMessageDialog(this, "No Password entered");
             } else {
                 c.st.executeUpdate("update tbl_teacher set teacher_pass = '" + jTextField5.getText().trim() + "' where teacher_id = " + jLabelTeacherID.getText());
@@ -441,7 +441,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jTextField1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField1CaretUpdate
         // TODO add your handling code here:
         jLabel1.setText(v.validateData("[A-Za-z]{3,30}", jTextField1.getText()));
-        if (jLabel1.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel1.getText())) {
             jLabel1.setForeground(Color.green);
         } else {
             jLabel1.setForeground(Color.red);
@@ -451,7 +451,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jTextField2CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField2CaretUpdate
         // TODO add your handling code here:
         jLabel8.setText(v.validateData("[A-Za-z]{3,30}", jTextField2.getText()));
-        if (jLabel8.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel8.getText())) {
             jLabel8.setForeground(Color.green);
         } else {
             jLabel8.setForeground(Color.red);
@@ -461,7 +461,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jTextField3CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField3CaretUpdate
         // TODO add your handling code here:
         jLabel9.setText(v.validateData("[0-9]{2,3}", jTextField3.getText()));
-        if (jLabel9.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel9.getText())) {
             jLabel9.setForeground(Color.green);
         } else {
             jLabel9.setForeground(Color.red);
@@ -471,7 +471,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jTextField4CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField4CaretUpdate
         // TODO add your handling code here:
         jLabel10.setText(v.validateData("^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$", jTextField4.getText()));
-        if (jLabel10.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel10.getText())) {
             jLabel10.setForeground(Color.green);
         } else {
             jLabel10.setForeground(Color.red);
@@ -481,7 +481,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
     private void jTextField5CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField5CaretUpdate
         // TODO add your handling code here:
         jLabel11.setText(v.validateData("[A-Za-z0-9]{3,30}", jTextField5.getText()));
-        if (jLabel11.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel11.getText())) {
             jLabel11.setForeground(Color.green);
         } else {
             jLabel11.setForeground(Color.red);
@@ -506,7 +506,7 @@ public class SettingInternalFrame extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
 
         try {
-            if (jTextField1.getText().equals("") && jTextField2.getText().equals("") && jTextField3.getText().equals("") && jTextField4.getText().equals("")) {
+            if ("".equals(jTextField1.getText()) && "".equals(jTextField2.getText()) && "".equals(jTextField3.getText()) && "".equals(jTextField4.getText())) {
                 JOptionPane.showMessageDialog(this, "Sorry, but an error has been made", "Required Data", JOptionPane.ERROR_MESSAGE);
             } else {
                 c.st.executeUpdate("insert into teacher_details values ('" + jTextField1.getText().trim() + "' , '" + jTextField2.getText().trim() + "' , " + jTextField3.getText().trim() + ",'" + jTextField4.getText().trim() + "'," + jLabelTeacherID.getText().trim() + ",'" + jLabelOldPassword.getText()+"')");
