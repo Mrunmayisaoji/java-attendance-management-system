@@ -29,8 +29,8 @@ public class Validation {
     }
     public static Icon validate (String a, String b) {
         Pattern p = Pattern.compile(a);
-        Matcher m = p.matcher(b);
-        if (m.matches()){
+        Matcher matcher = p.matcher(b);
+        if (matcher.matches()){
             Icon icon = (new ImageIcon("attendancems_with_prepared22.Project_Images/validdation-smiley.jpg"));
             String image = icon.toString();
             
