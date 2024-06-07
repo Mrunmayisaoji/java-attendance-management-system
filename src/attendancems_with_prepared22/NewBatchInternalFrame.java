@@ -533,7 +533,7 @@ Validation v;
         // TODO add your handling code here:
         
         jLabel10.setText(v.validateData("[A-Z-0-9]{5,20}", jTextField1.getText()));
-        if (jLabel10.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel10.getText())) {
             jLabel10.setForeground(Color.green);
         }
         else {

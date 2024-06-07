@@ -593,7 +593,7 @@ Validation v;
     private void jTextField1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField1CaretUpdate
         // TODO add your handling code here:
         jLabel14.setText(v.validateData("[A-Za-z0-9-]{3,30}", jTextField1.getText()));
-        if (jLabel14.getText().equals("Valid")) {
+        if ("Valid".equals(jLabel14.getText())) {
             jLabel14.setForeground(Color.green);
         }
         else {
